@@ -1,0 +1,28 @@
+<div class="list-container">
+    <ul class="col-4 mx-auto rounded shadow-lg list-unstyled  my-4 ">
+        <app-list-item
+            *ngFor = 'let todo of todos'
+            [todo] = 'todo'
+            (newItemEvent)="getContent($event)"
+        ></app-list-item>
+    </ul>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Edit</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control"   [(ngModel)]='todoContent'>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)='edit()'>Save</button>
+        </div>
+      </div>
+    </div>
+  </div>

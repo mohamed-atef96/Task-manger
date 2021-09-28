@@ -1,0 +1,12 @@
+.list-container ul{
+    position: relative;
+    z-index: 1;
+    background: #13232f;
+    color: #aaa;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.modal-content{
+     background: #13232f;
+    color: #aaa;
+}

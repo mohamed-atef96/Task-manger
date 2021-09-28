@@ -1,0 +1,9 @@
+<li class="d-flex justify-content-between align-items-center p-3 ">
+    <h5 class="text-wrap col-10" >{{todo.content}}</h5>
+     <div class="buttons">
+         <i class='far fa-edit edit ' data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="sendContent({content:todo.content,id:todo._id})"></i>
+         <i class="fas fa-trash-alt ms-2 delete" (click)='delete()'></i>
+     </div>
+ </li>
+    
+

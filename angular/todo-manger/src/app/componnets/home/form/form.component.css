@@ -1,0 +1,22 @@
+.btn{
+    background-color: #05062D;;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+   width: 100px;
+}
+.form-container{
+    position: relative;
+    z-index: 1;
+    padding-top: 130px;
+}
+input[type='text']{
+    background: #13232f;
+    color: #aaa;
+    outline: none !important;
+    border: none;
+}
+input[type='text']:focus{
+    outline: none !important;
+    box-shadow: 0 0 10px #13232f;
+}

@@ -1,0 +1,13 @@
+.navbar{
+    background: #13232f;
+    color: #fff;
+    min-height: 70px;
+}
+.rigister{
+    background-color: #1ab188;;
+   
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+   width: 100px;
+}

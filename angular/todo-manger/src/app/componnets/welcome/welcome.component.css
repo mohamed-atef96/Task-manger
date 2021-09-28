@@ -1,0 +1,21 @@
+.welcome{
+    height: 90vh;
+    background-image:linear-gradient(to top,#13232f99,#13232f), url('../../../assets/images/welcome-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    background-color: #1ab188;;
+   border: none;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+   padding: 15px 50px;
+   font-size: 20px;
+   margin-top: 20px;
+}

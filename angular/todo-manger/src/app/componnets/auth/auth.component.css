@@ -1,0 +1,28 @@
+.auth-container{
+    height: 90vh;
+}
+.form,.auth-container{
+    background: #13232f;
+    color: #fff;
+}
+a{
+    background-color: #435259;
+   
+    text-decoration: none;
+    color: #13232f;
+    display: inline-block;
+    padding: 10px 50px;
+}
+.active{
+    background: #1ab188;
+    color: #fff;
+}
+ul{
+    list-style-type: none;
+}
+.alert{
+    position: absolute;
+    z-index: 1000;
+    top: 150px;
+    left: 20px;
+}

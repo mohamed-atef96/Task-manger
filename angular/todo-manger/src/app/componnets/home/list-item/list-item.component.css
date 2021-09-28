@@ -1,0 +1,48 @@
+li{
+    position: relative;
+}
+li:hover{
+    background-color: #1a2f3fef;
+    cursor: pointer;
+}
+
+
+li::after{
+    content: '';
+    display: flex;
+    width: 90%;
+    height: 1px;
+    background-color: #eee;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}
+
+li:last-of-type::after{
+    content: '';
+    display: none;
+}
+.delete:hover{
+color: #DC3545;
+cursor: pointer;
+}
+.edit:hover{
+    color: green;
+    cursor: pointer;
+}
+.completed{
+    text-decoration: line-through;
+    color: #666;
+    font-weight: normal;
+}
+.modal-dialog{
+    z-index: 1111 !important;
+}
+.modal-backdrop{
+    z-index: -11111 !important;
+}
