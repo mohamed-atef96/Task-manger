@@ -1,3 +1,4 @@
+import { ConstantPool } from '@angular/compiler';
 import { Component, OnInit , Input, Output, EventEmitter } from '@angular/core';
 import { defaultTodo, ITodo } from 'src/app/interfaces/todos.interface';
 import { TodosService } from 'src/app/services/todos.service';
@@ -24,5 +25,8 @@ export class ListItemComponent implements OnInit {
 
   sendContent(todo:{content:string,id:string}) {
     this.newItemEvent.emit(todo);
+  }
+  complete(){
+    this.todosService.editTodo({content:this.todo.content,completed:!this.todo.completed},this.todo._id)
   }
 }

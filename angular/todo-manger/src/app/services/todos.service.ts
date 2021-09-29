@@ -53,7 +53,7 @@ export class TodosService {
     )
 }
 
-  editTodo(data:{content:string}, id:string){
+  editTodo(data:{content:string,completed:boolean}, id:string){
     this.http.put(`${this.shortUrl}/updateTodo/${id}`,
     data,this.token).subscribe(
       data => this.fetchTodos(),

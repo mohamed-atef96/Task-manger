@@ -25,6 +25,6 @@ export class ListComponent implements OnInit {
    this.todoId = todo.id
   }
   edit(){
-    this.todosService.editTodo({content:this.todoContent},this.todoId)
+    this.todosService.editTodo({content:this.todoContent,completed:false},this.todoId)
   }
 }

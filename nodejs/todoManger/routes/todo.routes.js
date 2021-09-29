@@ -41,10 +41,14 @@ router.post('/creatTodo',async(req,res)=>{
 
 router.put('/updateTodo/:id',async(req,res)=>{
     const {id} = req.params;
-    const {content} = req.body;
+    const {content,completed} = req.body;
     const user = req.user;
-
-    const todo = await todos.findOneAndUpdate({_id: id, 'createdBy.id':user.id}, {content})
+    if(typeof(completed) !== 'undefined'){
+        const todo = await todos.findOneAndUpdate({_id: id, 'createdBy.id':user.id}, {completed})
+    }else if(content){
+        const todo = await todos.findOneAndUpdate({_id: id, 'createdBy.id':user.id}, {content})
+    }
+    const todo = await todos.findOneAndUpdate({_id: id, 'createdBy.id':user.id}, {content,completed})
 
     if(!todo) return res.status(400).json({msg:'Error todo not found'});
 
